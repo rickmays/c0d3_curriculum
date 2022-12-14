@@ -15,12 +15,19 @@
  * @param {string} str
  * @param {function} fun
  * @returns {function}
- */
+  */
 
 const solution = (str, fun) => {
-  return () => { }
-}
-
+  let i = 0;
+  return () => {
+    fun(str[i]);
+    if (i === str.length - 1) {
+      i = 0;
+    } else {
+      i += 1;
+    }
+  };
+};
 module.exports = {
-  solution
-}
+  solution,
+};
