@@ -12,9 +12,31 @@
  */
 
 const solution = (num, fun) => {
-  return () => { }
-}
+  return () => {
+    if (num <= 0) {
+      return null;
+    }
+    num -= 1;
+    return fun();
+  };
+};
 
 module.exports = {
-  solution
-}
+  solution,
+};
+
+// resf = solution(3, () => {
+//   return "hello";
+// });
+// console.log(resf());
+// console.log(resf());
+// console.log(resf());
+// console.log(resf());
+// console.log(resf());
+
+resf = solution(1, () => {
+  return 100;
+});
+console.log(resf());
+console.log(resf());
+console.log(resf());
