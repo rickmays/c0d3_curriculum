@@ -8,9 +8,17 @@
  */
 
 const solution = (num) => {
-  return () => {}
-}
+  return () => {
+    return (num += 1);
+  };
+};
 
 module.exports = {
-  solution
-}
+  solution,
+};
+
+// let resf = solution(-5);
+// result = resf();
+// console.log(result);
+// result = resf();
+// console.log(result);
