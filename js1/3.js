@@ -19,4 +19,8 @@ module.exports = {
 };
 
 // console.log(solution(3, "abc"));
+<<<<<<< HEAD
 // console.log(solution(0, "hello"));
+=======
+// console.log(solution(0, "hello"));
+>>>>>>> p3
