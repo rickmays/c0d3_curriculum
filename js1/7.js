@@ -9,9 +9,16 @@
  */
 
 const solution = (inp, letter, i = 0) => {
-  return true
-}
+  // Base Case
+  if (i === inp.length) return false;
+
+  // Recursive Case
+  if (inp[i] === letter) {
+    return true;
+  }
+  return solution(inp, letter, i + 1);
+};
 
 module.exports = {
-  solution
-}
+  solution,
+};
