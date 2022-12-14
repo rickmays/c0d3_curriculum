@@ -8,10 +8,18 @@
  * @returns {string}
  */
 
-const solution = (str, fun, result = '', i = 0) => {
-  return ''
-}
+const solution = (str, fun, result = "", i = 0) => {
+  // Base Case
+  if (i === str.length) {
+    return result;
+  }
+
+  // Recursive Case
+  result += fun(str[i]);
+  
+  return solution(str, fun, result, i + 1);
+};
 
 module.exports = {
-  solution
-}
+  solution,
+};
