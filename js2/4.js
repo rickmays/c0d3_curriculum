@@ -15,10 +15,13 @@
  * @returns {function}
  */
 
-const solution = (arr, cb) => {
-  return () => {}
-}
+const solution = (arr, cb, i = -1) => {
+  return () => {
+    i++;
+    return cb(arr[i % arr.length]);
+  };
+};
 
 module.exports = {
-  solution
-}
+  solution,
+};
