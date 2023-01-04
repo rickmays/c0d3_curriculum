@@ -6,9 +6,16 @@
  * @param {number} time
  */
 
-const solution = (arr, time) => {
-}
+const solution = (arr, time, i = 0) => {
+  const intervalId = setInterval(() => {
+    arr[i]();
+    i++;
+    if (i === arr.length) {
+      clearInterval(intervalId)
+    }
+  }, time);
+};
 
 module.exports = {
-  solution
-}
+  solution,
+};
